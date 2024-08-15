@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US ChatRoom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- JOIN WINDOWS -->
+        <div class="screen join-screen active">
+            <div class="form">
+                <h1>Welcome US!</h1>
+                <div class="form-input">
+                    <label>Name</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-input">
+                    <button id="join-user">JOIN</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHAT WINDOWS -->
+        <div class="screen chat-screen">
+            <!-- header started -->
+            <div class="header">
+                <div class="logo">USSSS</div>
+                <div class="total-user" id="user-count">Total: 0</div>
+                <button id="exit-chat">LEAVE</button>
+                <img src="sidebar.svg"  id="toggle-user-list" alt="">
+                <!-- <button id="toggle-user-list"></button> -->
+            </div>
+            <!-- header ended -->
+
+            <!-- conversation started -->
+            <div class="messages"></div>
+            <!-- conversation ended -->
+
+            <!-- user-list sidebar started -->
+            <div class="user-list">
+                <h4>Total: <span id="user-count-sidebar">0</span></h4>
+                <ul class="users"></ul>
+            </div>
+
+            <!-- message input box -->
+            <div class="typebox">
+                <input type="text" id="message-input" placeholder=" Message">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+
